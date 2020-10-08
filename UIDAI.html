@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home-Unique Identification Authority of India</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.ex1 {
+  border-color: black;
+  
+  width: 400px;
+  height: 600px;
+  overflow: scroll;
+  box-shadow: 2px 2px 6px 4px lightgray;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.header {
+  padding: 10px 16px;
+  color: black;
+}
+.content {
+  padding: 16px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.mySlides {display: none}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position:backdrop;
+  margin: auto;
+  float:left;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+section{
+    position: relative;
+    height: calc(100vh - 3rem);
+    width: 100%;
+    background: url('bg.jpg') no-repeat top center / cover;
+    overflow: hidden;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(56, 165, 238, 0.5);
+}
+
+.container{
+    max-width: 65rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    height:auto;
+}
+
+.logo-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+.nav-links{
+    flex: 2;
+}
+
+.log-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+.logo span{
+    font-weight: 300;
+}
+
+.btn{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: .8rem;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+    text-transform: uppercase;
+}
+
+.btn.solid, .btn.transparent:hover{
+    background-color: #fff;
+    color: #69bde7;
+}
+
+.btn.transparent, .btn.solid:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.nav-links > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link > a{
+    line-height: 3rem;
+    color: #fff;
+    padding: 0 .8rem;
+    letter-spacing: 1px;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+.underliner{
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.underliner:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background:darkblue;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underliner:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.underliner2{
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.underliner2:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background:white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underliner2:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.nav-link > a > i{
+    margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+    transform: scale(1.1);
+}
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.dropdown ul{
+    position: relative;
+}
+
+.dropdown-link > a{
+    display: flex;
+    background-color: #fff;
+    color: #3498db;
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.dropdown-link:hover > a{
+    background-color: #3498db;
+    color: #fff;
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+    border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+    transform: rotate(-90deg);
+}
+
+.arrow{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: black;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+    background-color: black;
+}
+
+.dropdown-link{
+    position: relative;
+}
+
+.dropdown.second{
+    top: 0;
+    left: 100%;
+    padding-left: .8rem;
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.dropdown.second .arrow{
+    top: 10px;
+    left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hamburger-menu-container{
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger-menu{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hamburger-menu div{
+    width: 1.6rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1001;
+    transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.hamburger-menu div:before{
+    transform: translateY(-7px);
+}
+
+.hamburger-menu div:after{
+    transform: translateY(7px);
+}
+
+#check{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 90000;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+    background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+    transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+    transform: translateY(0) rotate(45deg);
+}
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.boxer{
+    border-style:solid;
+    border-top-color:darkblue;
+    border-right-color: gray;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-right-width: thin;
+    border-left-width: thin;
+    border-bottom-width: thin;
+    border-top-width: thick;
+    border-radius: 15px;
+    box-shadow:0px 15px 10px -15px;
+    padding:10px;
+    }
+.boxer2{
+    border-style:solid;
+    border-top-color:darkblue;
+    border-right-color: gray;
+    border-left-color: gray;
+    border-bottom-color: gray;
+    border-right-width: thin;
+    border-left-width: thin;
+    border-bottom-width: thin;
+    border-top-width: thick;
+    box-shadow:0px 15px 10px -15px;
+    }
+
+    .topnav .search-container button:hover {
+  background: #ccc;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+@keyframes animation{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 920px){
+    .hamburger-menu-container{
+        display: flex;
+    }
+
+    #check{
+        display: block;
+    }
+
+    .nav-btn{
+        position: fixed;
+        height: calc(100vh - 3rem);
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background-color: #69bde7;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: .65s;
+    }
+
+    #check:checked ~ .nav-btn{
+        transform: translateX(0);
+    }
+
+    #check:checked ~ .nav-btn .nav-link,
+    #check:checked ~ .nav-btn .log-sign{
+        animation: animation .5s ease forwards var(--i);
+    }
+
+    .nav-links{
+        flex: initial;
+        width: 100%;
+    }
+
+    .nav-links > ul{
+        flex-direction: column;
+    }
+
+    .nav-link{
+        width: 100%;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    .nav-link > a{
+        line-height: 1;
+        padding: 1.6rem 2rem;
+    }
+
+    .nav-link:hover > a{
+        transform: scale(1);
+        background-color: #50a9d6;
+    }
+
+    .dropdown, .dropdown.second{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        opacity: 1;
+        pointer-events: auto;
+        width: 150%;
+        padding: 0;
+        background-color: #3183ac;
+        display: none;
+    }
+    
+    .nav-link:hover > .dropdown,
+    .dropdown-link:hover > .dropdown{
+        display: block;
+    }
+
+    .nav-link:hover > a > i,
+    .dropdown-link:hover > a > i{
+        transform: rotate(360deg);
+    }
+
+    .dropdown-link > a{
+        background-color: transparent;
+        color: #fff;
+        padding: 1.2rem 2rem;
+        line-height: 1;
+    }
+
+    .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 3rem;
+    }
+
+    .dropdown.second .dropdown.second .dropdown-link > a{
+        padding: 1.2rem 2rem 1.2rem 4rem;
+    }
+
+    .dropdown-link:not(:nth-last-child(2)){
+        border-bottom: none;
+    }
+
+    .arrow{
+        z-index: 1;
+        background-color: #69bde7;
+        left: 10%;
+        transform: scale(1.1) rotate(45deg);
+        transition: .5s;
+    }
+
+    .nav-link:hover .arrow{
+        background-color: #50a9d6;
+    }
+
+    .dropdown .dropdown .arrow{
+        display: none;
+    }
+
+    .dropdown-link:hover > a{
+        background-color: #3a91bd;
+    }
+
+    .dropdown-link:first-child:hover ~ .arrow{
+        background-color: #50a9d6;
+    }
+
+    .nav-link > a > i{
+        font-size: 1.1rem;
+        transform: rotate(-90deg);
+        transition: .7s;
+    }
+
+    .dropdown i{
+        font-size: 1rem;
+        transition: .7s;
+    }
+
+    .log-sign{
+        flex: initial;
+        width: 100%;
+        padding: 1.5rem 1.9rem;
+        justify-content: flex-start;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header" id="myHeader" style="background-image: url(white.jpg)">
+    <div style="background-image: url(white.jpg)"><img src="symbolind.jpg"><b>Unique Identification Authority of India,Government of India</b><img style="float:right" src="aadhar.jpg">
+    </div>
+    <div style="background-color:darkblue">
+    <div class="container">
+            <input type="checkbox" name="" id="check">
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">My Aadhar<i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Get Aadhar<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Locate an Enrollment Center</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Book an Appointment</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Aadhar Status</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Download Aadhar</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Retrieve Lost/ Forgotten</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Order Aadhar Reprint</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Aadhar Reprint Status</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Order Aadhar PVC Card</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Aadhar PVC Card Status</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <li class="dropdown-link">
+                                        <a href="#">Update your Aadhar<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Update your Aadhar at Enrollment/ Update Center</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Aadhar update Status</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Update your address online</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Request for Address Validation Letter</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check online address update status</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Update Status</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <li class="dropdown-link">
+                                        <a href="#">Aadhar Services<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Verify Aadhar number</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Verify Mobile/ Email Number</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Retrieve Lost/ Forgotten</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Virtual ID Generator</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Aadhar linking Status</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Lock/ Unlock Biometrics</a>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                        <li class="dropdown-link">
+                                        <a href="#">About your Aadhar<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">What is Aadhar</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Features of Aadhar</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Usage of Aadhar</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Enrollment</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Generation</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Updating data on Aadhar</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <li class="dropdown-link">
+                                        <a href="#">Aadhar on your Mobile<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">mAadhar on Mobile</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">mAadhar App links for IOS</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Downloads<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Enrollment/ Update Form</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">List of Supporting Document</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">New eAadhar</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Handbooks</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">About UIDAI<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Unique Identification Authority of India<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">About</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Vision & Mission</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Composition of UIDAI Authority</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Organizational Structure</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Finance & Accounts</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Legal Framework<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Act</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Rules</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Regulations</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Circulars</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Notification</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Work With UIDAI<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Deputation/ Contract</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Professional/ Technical</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Volunteers/ Sabbatical</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Officers Served in the Past</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Tenders</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Right To Information</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">UIDAI Citizens Charter</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Aadhar Dashboard</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Ecosystem<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">UIDAI Ecosystem<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">About UIDAI Ecosystem</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Tenders</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Enrollment Ecosystem<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Registrars</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Enrollment Agencies</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Seva Kendra</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Enrollment Documents<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">MoUs</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Sanction Orders</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Saturation Reports</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Authentication Ecosystem<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Operation Model</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Authentication Requesting Agency</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Authentication Service Agencies</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Authentication Devices & Documents<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Authentication Devices</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Biometric Devices</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Authentication Documents</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">QR Code Reader</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Developer Section</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Training,Testing & Certification Ecosystem<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Program of Enrollment Agency Staff</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Training and Testing Material</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Media & Resources<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Media<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Whats New</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar in Print</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Broadcast</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Aadhar Telecast</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Press Releases</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Quote/Unquote</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Resources<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Advertisements</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Photos</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Videos</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">UIDAI Documents<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Annual Reports</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Circulars, Memorandums & Notification</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Tenders</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Handbooks</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Parliament Questions</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Brand Aadhar<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Brand Guidelines</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">IEC Guidelines</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Logo</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Contact & Support<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Have Any Questions?<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">FAQs</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Glossary</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Contact Directory<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">UIDAI Headquarter</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Regional Offices</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Grievance Redressal Mechanism<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">File a Complaint</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Check Complaint Status</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Right To Information</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Feedback</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                        <a href="#">Prevention of Sexual Harassment at Woek Place Policy</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+    </div>
+    <div class="topnav" style="background-color:darkblue">
+    <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+</div> 
+</div>
+<div class="content">
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="welcome.png" style="width:160%">
+</div>
+
+<div class="mySlides fade">
+  <img src="aadharhindi.jpg" style="width:160%">
+</div>
+
+<div class="mySlides fade">
+  <img src="aadharenglish.jpg" style="width:160%">
+</div>
+<div class="mySlides fade">
+  <img src="sevakendra.jpg" style="width:160%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+    <br><br>
+<div class="row">
+  <div class="column" style="width:60%">
+    <div class="boxer">
+        <a href="#"><h2 class="underliner" style="color: darkblue">Get Aadhar ></h2></a>
+        <b><p style="color:brown">Aadhar is for every citizen of India</p></b>
+        <p >From a new born to a senior citizen, everyone can enrol for Aadhaar.</p>
+        <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Locate an Enrollment Center</a>|<a href="#" class="underliner" style="color:darkblue">Book an Appointment</a>|<a href="#" class="underliner" style="color:darkblue">Check Aadhar Status</a>|<a href="#" class="underliner" style="color:darkblue">Download Aadhar</a><a href="#" class="underliner" style="color:darkblue">Retrieve Lost or Forgotten EID/UID</a>|<a href="#" class="underliner" style="color:darkblue">Order Aadhaar Reprint</a>|<a href="#" class="underliner" style="color:darkblue">Check Aadhaar Reprint Status</a>|<a href="#" class="underliner" style="color:darkblue">Order Aadhaar PVC Card</a>|<a href="#" class="underliner" style="color:darkblue">Check Aadhaar PVC Card Status</a></p></b>
+      </div><br>
+<div class="boxer">
+        <a href="#"><h2 class="underliner" style="color: darkblue">Update Aadhar ></h2></a>
+        <br><b style="color:brown">Keep your Aadhar details up-to-date.</b>
+        <p >It is essential that your Aadhaar Data is correct and remains updated always.</p>
+        <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Locate an Enrollment CenterUpdate Aadhaar at Enrolment/Update Center</a>|<a href="#" class="underliner" style="color:darkblue">Check Aadhaar Update Status</a>|<a href="#" class="underliner" style="color:darkblue">Update your address online</a>|<a href="#" class="underliner" style="color:darkblue">Check online address update status</a>|<a href="#" class="underliner" style="color:darkblue">Aadhaar Update History</a></p></b>
+      </div><br>
+<div class="boxer">
+        <a href="#"><h2 class="underliner" style="color: darkblue">Aadhar Services ></h2></a>
+        <br><b style="color:brown">An array of services for Aadhaar holders</b>
+        <p >Aadhaar Registered Mobile number is essential to access the following services.</p>
+        <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Verify an Aadhaar Number</a>|<a href="#" class="underliner" style="color:darkblue">Verify Email/Mobile Number</a>|<a href="#" class="underliner" style="color:darkblue">Virtual ID (VID) Generator</a>|<a href="#" class="underliner" style="color:darkblue">Aadhaar Paperless Offline e-kyc (Beta)</a>|<a href="#" class="underliner" style="color:darkblue">Lock/Unlock Biometrics</a></p></b>
+      </div><br><br><br>
+      <b><a href="#" class="underliner" style="color: darkblue;font-size: 100%">What is Aadhar ></a></b>
+      <p> Aadhaar is a verifiable 12-digit identification number issued by UIDAI to the resident of India for free of cost.</p>
+      <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Aadhaar Mythbusters</a>|<a href="#" class="underliner" style="color:darkblue">The Aadhar Act</a></p></b>
+      <br><br>
+      <b><a href="#" class="underliner" style="color: darkblue;font-size: 100%">Aadhar Ecosystem ></a></b>
+      <p>Aadhaar is a verifiable 12-digit identification number issued by UIDAI to the resident of India for free of cost.</p>
+      <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Enrolment & Update Ecosystem</a>|<a href="#" class="underliner" style="color:darkblue">Authentication Ecosystem</a>|<a href="#" class="underliner" style="color:darkblue">Training, Testing & Certification Ecosystem</a></p></b><br><br>
+      <b><a href="#" class="underliner" style="color: darkblue;font-size: 100%">Work with UIDAI ></a></b>
+      <p>UIDAI offers exciting opportunities for Government of India employees and professionals.</p>
+      <b><p style="font-size: 80%"><a href="#" class="underliner" style="color:darkblue">Deputation/Contracts</a>|<a href="#" class="underliner" style="color:darkblue">Professional/Technical (NISG) Vacancies</a>|<a href="#" class="underliner" style="color:darkblue">Volunteers/Sabbatical</a>|<a href="#" style="color:darkblue" class="underliner">Officers Served in the Past</a>|<a href="#" class="underliner" style="color:darkblue">Tenders</a></p></b><br><br>
+      <p><b>Aadhar in Print</b><a href="#" class="underliner" style="color:darkblue;text-align:right">View All</a></p>
+      <div>
+          <div style="width:45%" class="column">
+              <div class="boxer">
+                Time for Proof<br><br><br>
+                5 Sep 2020 |<b style="color:red">Economist</b><br>
+                  <b><a href="#" class="underliner" style="color:darkblue">Download</a></b>
+              </div>
+          </div>
+          <div style="width:45%" class="column">
+          <div class="boxer">
+             India has potential for very rapid econoimc growth Bill Gates<br><br>
+                18 Nov 2019 |<b style="color:red">Pioneer</b><br>
+                  <b><a href="#" class="underliner" style="color:darkblue">Download</a></b>
+              </div>
+              </div>
+      </div>
+      <p><b>Aadhar Telecast</b><a href="#" class="underliner" style="color:darkblue;text-align:right">View All</a></p>
+      <div>
+          <div style="width:45%" class="column">
+              <div class="boxer2">
+                <iframe width="395" height="200" src="https://www.youtube.com/embed/db-QdpxMhg0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+          <div style="width:45%" class="column">
+          <div class="boxer2">
+             <iframe width="395" height="200" src="https://www.youtube.com/embed/sJbWVsArxLk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              </div>
+      </div><br><br>
+      <p><b>PressRelease</b><a href="#" class="underliner" style="color:darkblue;text-align:right">View All</a></p>
+      <div>
+          <div style="width:45%" class="column">
+              <div class="boxer">
+                <img src="aadhar.jpg" width="50" height="25"><br>
+                  Aadhar is not a citizenship document.<br><br><br>
+                18 Feb 2020<br>
+                  <b><a href="#" class="underliner" style="color:darkblue">Download</a></b>
+              </div>
+          </div>
+          <div style="width:45%" class="column">
+          <div class="boxer">
+              <img src="aadhar.jpg" width="50" height="25"><br>
+             28 UIDAI-run Aadhar Seva Kendras operational across the country<br><br>
+                1 Jan 2020<br>
+                  <b><a href="#" class="underliner" style="color:darkblue">Download</a></b>
+              </div>
+              </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src="design.JPG" height="12.5" width="25">Aadhar in Numbers<br>
+      <img src="num.JPG" width="400" height="100"><br>
+      <b><a href="#" class="underliner" style="color:darkblue">Aadhar Saturation Report</a>|<a href="#" class="underliner" style="color:darkblue">View on Dashboard</a></b>
+    </div>
+
+  <div class="column" style="width:36%">
+      <img src="freqquest.JPG" style="float:left"><h2>Frequently Asked Questions</h2>
+    <button class="accordion">Use Aadhar Freely</button>
+    <div class="panel">
+      <button class="accordion">What happens if some fraudster who obtains a copy of my Aadhar  card and tries to open a bank account in my name without my knowledge. Will I not be harmed?</button>
+    <div class="panel">
+    <p>Under the PML Rules Aadhaar is one of the officially valid documents accepted for opening bank account and the bank is required to do other due diligence for banking transaction or KYC. If at all some fraudster tries to open bank account using Aadhaar and bank doensn’t carry any due diligence then in such case an Aadhaar holder cannot be held responsible for bank’s fault. It is just like if some fraudster opens a bank account by presenting someone else’s Voter card/Ration card, it is the bank that would be held responsible not the voter or ration card holder. Till date no Aadhaar holder has suffered any financial loss on account of such misuse.</p>
+</div>
+      <button class="accordion">If Aadhar has to be used freely for proving identity andit is safe to do so, then why has UIDAI advised people to not put up their Aadhar number in Social Media or public domain?</button>
+    <div class="panel">
+    <p>You use PAN card, debit card, credit card, bank cheques wherever required. But do you put these details openly on internet and social media such as Facebook, Twitter, etc.? Obviously no! You do not put such personal details unnecessarily in public domain so that there is no unwarranted invasion attempt on your privacy. The same logic needs to be applied in case of uses of Aadhaar.</p>
+</div>
+<button class="accordion">I gave my Aadhar card to a service provider for proving my identity. Can anyone harm me by knowing and misusing my Aadhar number?</button>
+    <div class="panel">
+    <p>No. Just, by knowing your Aadhaar number, no one can harm you. It’s just like any other identity document such as passport, voter ID, PAN card, ration card, driving license, etc., that you have been using freely for decades with service providers. Aadhaar identity, instead, is instantly verifiable and hence more trusted. Also, as per the Aadhaar Act 2016, the Aadhaar card is required to be verified  either by in physical or electronic formby way of authentication or offline verification, or in such other form as may be specified. Verification is done through fingerprint, iris scan, OTP authentication, and QR code etc. Hence, it is near impossible to impersonate you if you use Aadhaar to prove your identity. People have been freely giving other identity documents such as passport, voter ID, PAN card, ration card, driving license, etc. But did they stop using these documents for the fear that somebody would use them to impersonate? No! They continue using them and if any fraud happens, the law enforcement agencies handle them as per law. The same logic will apply to Aadhaar. In fact, Aadhaar is more secure than many other identity documents, because unlike other IDs, Aadhaar is instantly verifiable through biometric and OTP authentication and QR code. Further, under the Aadhaar Act, 2016 stringent penalties, including fines and imprisonment are provided whenever a person misuses your Aadhaar number or tries to cause any harm to you.</p>
+</div>
+<button class="accordion">Does linking my bank account, PAN and other services with Aadhar make me vulnerable?</button>
+    <div class="panel">
+    <p>No. As your bank information is not shared by the bank with anyone else, no one can have information about your bank account just by knowing your Aadhaar number. Also, UIDAI or any entity for that matter would not have any information about your bank account. For example, you give your mobile number at various places and to various authorities such as bank, passport authorities, income tax departments, etc. Would the telecom company have access to your bank information, income tax returns, etc.? Obviously no! Similarly, when you provide Aadhaar number to various service providers, your detail remains with the respective service providers and no single entity including the Government or UIDAI will have access to your personal information spread across various service providers.</p>
+</div>
+<button class="accordion">There are many agencies that simply accept physical copy of Aadhaar and do not carry out any biometric or OTP authentication or verification. Is this a good practice?</button>
+    <div class="panel">
+    <p>Aadhaar authentication can be performed for availing benefits, services and benefits falling under Section 7 of the Aadhaar Act, 2016 and if the purpose for which Aadhaar authentication is intended to be used is either backed by law made by parliament or is in the State interest. The verification of Aadhaar can be done offline through QR code available on the physical Aadhaar copy. If any agency does not follow these best practices, then that agency will be fully responsible for situations or losses arising out of possible misuse or impersonation. An Aadhaar holder is not responsible for the wrongful act of or by any agency.</p>
+</div>
+</div>
+
+
+<button class="accordion">E-Aadhar</button>
+<div class="panel">
+  <button class="accordion">What is Masked Aadhar?</button>
+    <div class="panel">
+    <p>Mask Aadhaar option allows you to mask your Aadhaar number in your downloaded e-Aadhaar. Masked Aadhaar number implies replacing of first 8 digits of Aadhaar number with some characters like “xxxx-xxxx” while only last 4 digits of the Aadhaar Number are visible.</p>
+</div>
+<button class="accordion">Is e-Aadhar equally valid like physical copy of Aadhar?</button>
+    <div class="panel">
+        <p>As per Aadhaar Act, e-Aadhaar is equally valid like Physical Copy of Aadhaar for all purposes. For UIDAI circular on validity of e Aadhaar, please visit <a href="https://uidai.gov.in/images/uidai_om_on_e_aadhaar_validity.pdf" class="underliner">https://uidai.gov.in/images/uidai_om_on_e_aadhaar_validity.pdf</a></p>
+</div>
+<button class="accordion">How can resident download e-Aadhar?</button>
+    <div class="panel">
+    Resident can download e-Aadhaar by following two ways.
+        <ol type="a">
+            <li><b>By Using Enrollment Number:</b>Resident can download e-Aadhaar using 28 digit enrolment no. along with Full Name and Pin code. In this download process OTP is received on registered mobile no. Resident can also use TOTP to download e-Aadhaar instead of OTP. TOTP can generated using mAadhaar mobile Application.</li>
+            <li><b>By Using Aadhaar No:</b>Resident can download e-Aadhaar by using 12 digits Aadhaar No. along with Full Name and Pin code. In this download process OTP is received on registered mobile no. Resident can also use TOTP to download e-Aadhaar instead of OTP. TOTP can generated using mAadhaar mobile Application.</li></ol>
+</div>
+<button class="accordion">What is the password of e-Aadhar?</button>
+    <div class="panel">
+        <p>Combination of the first 4 letters of name in CAPITAL and the year of birth (YYYY) as password.
+
+For Example:<br>
+
+Example 1<br>
+Name: SURESH KUMAR<br>
+Year of Birth: 1990<br>
+Password: SURE1990<br>
+
+Example 2<br>
+Name: SAI KUMAR<br>
+Year of Birth: 1990<br>
+Password: SAIK1990<br>
+
+Example 3<br>
+Name: P. KUMAR<br>
+Year of Birth: 1990<br>
+Password: P.KU1990<br>
+
+Example 4<br>
+Name: RIA<br>
+Year of Birth: 1990<br>
+Password: RIA1990</p>
+</div>
+</div>
+
+<button class="accordion">mAadhar FAQs</button>
+<div class="panel">
+  <button class="accordion">What is iOS compatible version for maadhaar app?</button>
+    <div class="panel">
+    <p>The mAadhaar app for iPhone is compatible for iOS 10.0 and above.</p>
+</div>
+  <button class="accordion">Does my profile on mAadhaar get inactive when changed to new phone with registered mobile number?</button>
+    <div class="panel">
+    <p>Yes, Aadhaar profile in a phone will automatically get deactivated the moment the same profile is registered in another mobile. Aadhaar can be registered only in one device at a time.</p>
+</div>
+<button class="accordion">Where can m-Aadhaar be used?</button>
+    <div class="panel">
+    <p>mAadhaar app can be used anywhere anytime within India. mAadhaar is more than Aadhaar card in a wallet. On one hand the mAadhaar profile is accepted as a valid ID proof by Airports and Railways on the other resident can use the features in the app to share their eKYC or QR code with service providers who sought Aadhaar verification of their customers before providing Aadhaar services. </p>
+</div>
+  <button class="accordion">Is there any difference in specification and/or functionality of M-Aadhaar basis on iOS & android device?</button>
+    <div class="panel">
+    <p>mAadhaar app provides same services to both iOS and Android device users. The functionality and UX remains same irrespective of devices (iOS, Android).</p>
+</div>
+</div>
+<button class="accordion">Aadhar Paperless Offline e-kyc</button>
+<div class="panel">
+<button class="accordion">Where can I find the Public Certificate for Digital Signature validation?</button>
+    <div class="panel">
+        <p>Public certificate for Digital signature validation can be <a href="https://uidai.gov.in/images/authDoc/uidai_offline_publickey_29032019.cer" class="underliner">downloaded from here.</a></p>
+</div>
+<button class="accordion">What is Aadhaar Paperless Offline e-KYC?</button>
+    <div class="panel">
+    <p>It is a secure sharable document which can be used by any Aadhaar number holder for offline verification of Identification.<br>
+
+A resident desirous of using this facility shall generate his/her digitally signed Aadhaar details by accessing UIDAI resident portal. The details will contain Name, Address, Photo, Gender, DOB, hash of registered Mobile Number, hash of registered Email Address and reference id which contains last 4 digits of Aadhaar Number followed by time stamp in a digitally signed XML. It will provide Offline Aadhaar Verification facility to service providers/Offline Verification Seeking Entity (OVSE) without the need to collect or store Aadhaar number.</p>
+</div>
+<button class="accordion">Can this Offline Paperless eKYC document be shared to other entities by the Service Provider?</button>
+    <div class="panel">
+    <p>Service Providers shall not share, publish or display either Share Code or XML file or its contents with anyone else. Any non-compliance of these actions shall invite actions under Sections 17 and 25 of The Aadhaar (Authentication) Regulation, 2016, Sections 4 and 6 of The Aadhaar (Sharing of Information) Regulation, 2016 and Sections 29(2), 29 (3) and 37 of The Aadhaar Act, 2016.</p>
+</div>
+<button class="accordion">How this Aadhaar Offline Paperless eKYC document is different from the other identification documents produced offline by residents?</button>
+    <div class="panel">
+    <p>Identity verification can simply be accomplished by providing an identity document like PAN card, Passport etc to the service provider. However, all these documents, which may be used for identification can still be forged and faked which may or may not be possible to verify offline instantaneously. The document verifier has no technological means to verify the authenticity of the document or the information it contains and has to trust the document producer. Whereas, the XML file generated by the Aadhaar number holder using Aadhaar Paperless Offline e-KYC is digitally signed document using UIDAI digital signature. Thus, the service provider can verify the demographic contents of the file and certify it to be authentic when doing the offline verification</p>
+</div>
+</div>
+      <b><a href="#" class="underliner" style="text-align:match-parent">View All</a></b>
+<br><br>
+      <div class="ex1">
+          <div style="border-bottom-color: lightgray;border-bottom-style: solid;height:50px;"><b style="color:lightblue" >Tweets</b> by UIDAI</div>
+          <div>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AadhaarHelpcentre?src=hash&amp;ref_src=twsrc%5Etfw">#AadhaarHelpcentre</a><br>To get direct answers to your queries related to Chandigarh, Jammu &amp; Kashmir, Ladakh, Haryana, Himachal Pradesh &amp; Punjab regions, tweet to <a href="https://twitter.com/UIDAIChandigarh?ref_src=twsrc%5Etfw">@UIDAIChandigarh</a>. We do not have any other social media profile of the Chandigarh Regional office. <a href="https://t.co/z9Sz4oTl0F">pic.twitter.com/z9Sz4oTl0F</a></p>&mdash; Aadhaar (@UIDAI) <a href="https://twitter.com/UIDAI/status/1313706465522151425?ref_src=twsrc%5Etfw">October 7, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+         <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AadhaarHelpcentre?src=hash&amp;ref_src=twsrc%5Etfw">#AadhaarHelpcentre</a><br>To get direct answers to your queries related to New Delhi, Madhya Pradesh, Rajasthan, or Uttarakhand regions, follow us on twitter at <a href="https://twitter.com/UIDAIDelhi?ref_src=twsrc%5Etfw">@UIDAIDelhi</a>. We do not have any other social media profile of the Delhi Regional office. <a href="https://t.co/JdJofP54Vw">pic.twitter.com/JdJofP54Vw</a></p>&mdash; Aadhaar (@UIDAI) <a href="https://twitter.com/UIDAI/status/1313349367659556865?ref_src=twsrc%5Etfw">October 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          asodasdh
+      </div>
+      <div class="ex1">
+          <div style="border-bottom-color: lightgray;border-bottom-style: solid;height:50px;"><b style="color:lightblue" >Tweets</b> by UIDAI</div>
+          <div>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AadhaarHelpcentre?src=hash&amp;ref_src=twsrc%5Etfw">#AadhaarHelpcentre</a><br>To get direct answers to your queries related to Chandigarh, Jammu &amp; Kashmir, Ladakh, Haryana, Himachal Pradesh &amp; Punjab regions, tweet to <a href="https://twitter.com/UIDAIChandigarh?ref_src=twsrc%5Etfw">@UIDAIChandigarh</a>. We do not have any other social media profile of the Chandigarh Regional office. <a href="https://t.co/z9Sz4oTl0F">pic.twitter.com/z9Sz4oTl0F</a></p>&mdash; Aadhaar (@UIDAI) <a href="https://twitter.com/UIDAI/status/1313706465522151425?ref_src=twsrc%5Etfw">October 7, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/AadhaarHelpcentre?src=hash&amp;ref_src=twsrc%5Etfw">#AadhaarHelpcentre</a><br>To get direct answers to your queries related to New Delhi, Madhya Pradesh, Rajasthan, or Uttarakhand regions, follow us on twitter at <a href="https://twitter.com/UIDAIDelhi?ref_src=twsrc%5Etfw">@UIDAIDelhi</a>. We do not have any other social media profile of the Delhi Regional office. <a href="https://t.co/JdJofP54Vw">pic.twitter.com/JdJofP54Vw</a></p>&mdash; Aadhaar (@UIDAI) <a href="https://twitter.com/UIDAI/status/1313349367659556865?ref_src=twsrc%5Etfw">October 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          
+      </div>
+      
+  </div>
+</div>
+    <div style="background-image: url('farm.jpg'); color:white;background-repeat: no-repeat;background-size: cover">
+        <div class="row">
+            <div class="column" style="width:23%">
+            <b style="text-align: center">Contact Us</b><br>
+            <a class="underliner2">Toll Free:1947</a><br>
+            <a class="underliner2">help@uidai.gov.in</a><br>
+                <b>Follow Us</b><br>
+                <a href="#"><img src="fb.JPG" style="height:20px;width:20px"></a>
+                <a href="#"><img src="twitter.JPG" style="height:20px;width:20px"></a>
+                <a href="#"><img src="youtube.JPG" style="height:20px;width:20px"></a>
+                <a href="#"><img src="insta.JPG" style="height:20px;width:20px"></a>
+                <a href="#"><img src="linkedin.JPG" style="height:20px;width:20px"></a>
+            </div>
+            <div class="column" style="width:23%">
+                <b>UIDAI Head Office</b><br>
+                Unique Identification Authority of India<br>
+                Government of India (GoI)<br>
+                Bangla Sahib Road, Behind Kali Mandir,<br> Gole Market,<br>
+                New Delhi - 110001<br><br>
+                <b>Regional Offices</b><br>
+                <form name='registration'>
+                <ul>
+                    <li><select name="city">
+                        <option selected="" value="Default">(Please select a State)</option>
+                        <option>Andaman and Nicobar Island</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chandigarh</option>
+                        <option>Chhattisgarh</option>
+                        <option>Dadr and Nagar Haveli</option>
+                        <option>Daman and Diu</option>
+                        <option>Delhi</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Harayana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Lakshadweep</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Puducherry</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                        </select>
+                    </li>
+                </ul>
+                </form>
+                UIDAI Regional Office, Delhi<br>
+                Ground Floor, Pragati Maidan Metro<br> Station, Pragati Maidan, New Delhi-<br>110001
+            </div>
+            <div class="column" style="width:23%;">
+            <a href="#" class="underliner2" style="color:white;">Website Policy</a><br>
+            <a href="#" class="underliner2" style="color:white;">Terms & Conditions</a><br>
+            <a href="#" class="underliner2" style="color:white;">Privacy Policy</a><br>
+            <a href="#" class="underliner2" style="color:white;">Hyperlinking Policy</a><br>
+            <a href="#" class="underliner2" style="color:white;">Copyright Policy</a><br>
+            <a href="#" class="underliner2" style="color:white;">Disclaimer</a><br>
+            <a href="#" class="underliner2" style="color:white;">Help</a><br>
+            <a href="#" class="underliner2" style="color:white;">Feedback</a><br>
+            <a href="#" class="underliner2" style="color:white;">Sitemap</a><br>
+            </div>
+            <div class="column" style="width:23%;">
+            <b>Government of India</b><br>
+            <a href="#" class="underliner2" style="color:white;">My Gov</a><br>
+            <a href="#" class="underliner2" style="color:white;">National Portal of India</a><br>
+            <a href="#" class="underliner2" style="color:white;">Digital India</a><br>
+            <a href="#" class="underliner2" style="color:white;">GST.gov.in</a><br>
+            <a href="#" class="underliner2" style="color:white;">DBT Bharat</a><br>
+            </div>
+        </div>
+        <div style="border-top-style: solid;">
+        Copyright © 2019 Unique Identification Authority of India All Rights Reserved<br>
+            JavaScript must be enabled to access this site.<br>
+            Supports : Firefox 37+ | Google Chrome 6.0+ | Internet Explorer 9.0+ | Safari 4.0+<br>
+        </div>
+    </div>
+    
+  </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
